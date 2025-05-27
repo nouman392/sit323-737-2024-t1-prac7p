@@ -1,65 +1,57 @@
-# 🚀 SIT737 – Cloud-Native Application Development  
-**Task 6.2C – Interacting with Kubernetes Cluster**
+# 📐 Calculator Microservice with MongoDB Integration
+
+This project is a Node.js-based calculator microservice extended with MongoDB support and deployed in a Kubernetes environment. It supports basic and advanced arithmetic operations and persists calculation data in a MongoDB database.
 
 ---
 
-Overview  
-In this task, we extended the deployment from Task 6 by actively interacting with the **Kubernetes cluster** using the `kubectl` CLI and **Kubernetes Dashboard**.  
-The task involved verifying the application status, using port forwarding to access the service locally, and finally updating the microservice by modifying its code and redeploying it with a new image tag.
+## 🚀 Features
+
+- ✅ REST API for basic & advanced arithmetic (add, subtract, multiply, divide, exponentiation, sqrt, modulo)
+- ✅ MongoDB-backed persistent storage for all calculations
+- ✅ Full CRUD API: Create, Read, Update, Delete
+- ✅ Kubernetes-native deployment with:
+  - Secrets for sensitive credentials
+  - Persistent storage for MongoDB
+  - ConfigMaps for MongoDB initialization
+- ✅ Docker + Docker Compose support for local development
 
 ---
 
-## 🧰 Tools Used  
-- [Node.js](https://nodejs.org/en/)  
-- [Docker](https://www.docker.com/)  
-- [Kubernetes](https://kubernetes.io/)  
-- `kubectl` – Kubernetes CLI  
-- [Visual Studio Code](https://code.visualstudio.com/)  
-- [Docker Hub](https://hub.docker.com/) or GCR for container registry
+## 🛠️ Tech Stack
+
+- **Node.js** with Express.js  
+- **MongoDB** for database  
+- **Mongoose** for MongoDB client  
+- **Docker** for containerization  
+- **Kubernetes** for orchestration  
+- **Winston** for logging
 
 ---
 
+## 📁 Folder Structure
 
-## ✅ Part I – Interacting with the Deployed Application
+├── server.js
+├── Dockerfile
+├── docker-compose.yml
+├── mongo-init.js
+├── mongo-configmap.yaml
+├── mongo-secret.yaml
+├── mongo-pv.yaml
+├── mongo-pvc.yaml
+├── mongodb-deployment.yaml
+├── mongodb-service.yaml
+├── calculator-deployment.yaml
+├── service.yaml
 
-### 🔹 1. Verify Kubernetes Resources
-Run the following to check if your pods and services are active:
-
-kubectl get pods
-kubectl get services
-
- 2. Port-Forward the Application
-Forward your service to a local port (e.g., localhost:8080):
-kubectl port-forward service/calculator-service 8080:80
-
- 3. Access Through Browser
-Open a browser and test:
-http://localhost:8080/add?num1=10&num2=5
-
-## ✅ Part II – Updating the Application
-1. Modify the Node.js Code
-Open server.js and update the response format, logging, or add a new endpoint (e.g., /version).
-
-app.get('/version', (req, res) => {
-    res.json({ version: "v2.0" });
-});
-2. Rebuild Docker Image with New Tag
-docker build -t calculator-microservice:v2 .
-docker tag calculator-microservice:v2 your-dockerhub/calculator-microservice:v2
-docker push your-dockerhub/calculator-microservice:v2
-3. Update Kubernetes Deployment
-Edit your deployment.yaml and change the image tag:
-
-containers:
-  - name: calculator
-    image: your-dockerhub/calculator-microservice:v2
-Apply the updated deployment:
-kubectl apply -f deployment.yaml
-4. Verify the Update
-Check if the new pods are running:
-kubectl get pods
-Port-forward again if needed:
-kubectl port-forward service/calculator-service 8080:80
-Test the new endpoint:
-http://localhost:8080/version
-
+ Kubernetes Setup
+Apply MongoDB storage & config
+kubectl apply -f mongo-pv.yaml
+kubectl apply -f mongo-pvc.yaml
+kubectl apply -f mongo-configmap.yaml
+kubectl apply -f mongo-secret.yaml
+Deploy MongoDB
+kubectl apply -f mongodb-deployment.yaml
+kubectl apply -f mongodb-service.yaml
+Deploy Calculator Microservice
+kubectl apply -f calculator-deployment.yaml
+kubectl apply -f service.yaml
