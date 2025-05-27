@@ -1,0 +1,53 @@
+{"level":"info","message":"Received request: GET /favicon.ico","service":"calculator-microservice"}
+{"level":"info","message":"Exponentiation operation: 3^25 = 847288609443","service":"calculator-microservice"}
+{"level":"info","message":"Exponentiation operation: 3^2 = 9","service":"calculator-microservice"}
+{"level":"info","message":"Exponentiation operation: 3^3 = 27","service":"calculator-microservice"}
+{"level":"info","message":"Exponentiation operation: 3^3 = 27","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 3 % 3 = 0","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 3 % 9 = 3","service":"calculator-microservice"}
+{"level":"error","message":"Attempted modulo by zero","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 3 % 8 = 3","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 3 % 15 = 3","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 3 % 15 = 3","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 3 % 15 = 3","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 3 % 15 = 3","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 3 % 15 = 3","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 5 % 15 = 5","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 15 % 15 = 0","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 15 % 15 = 0","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 3 % 15 = 3","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 15 % 3 = 0","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 4 % 12 = 4","service":"calculator-microservice"}
+{"level":"info","message":"Exponentiation operation: 4^12 = 16777216","service":"calculator-microservice"}
+{"level":"info","message":"Exponentiation operation: 4^2 = 16","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 4 % 2 = 0","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 4 % 4 = 0","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 5 % 10 = 5","service":"calculator-microservice"}
+{"level":"error","message":"Missing parameters for modulo operation","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 10 % 2 = 0","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 3 % 10 = 3","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 10 % 3 = 1","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 9 % 3 = 0","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 16 % 3 = 1","service":"calculator-microservice"}
+{"level":"error","message":"Missing parameter for square root","service":"calculator-microservice"}
+{"level":"error","message":"Missing parameter for square root","service":"calculator-microservice"}
+{"level":"error","message":"Missing parameter for square root","service":"calculator-microservice"}
+{"level":"error","message":"Missing parameter for square root","service":"calculator-microservice"}
+{"level":"error","message":"Missing parameter for square root","service":"calculator-microservice"}
+{"level":"error","message":"Missing parameter for square root","service":"calculator-microservice"}
+{"level":"info","message":"subtract operation: 10 - 5 = 15","service":"calculator-microservice"}
+{"level":"error","message":"Missing parameter for square root","service":"calculator-microservice"}
+{"level":"error","message":"Missing parameter for square root","service":"calculator-microservice"}
+{"level":"error","message":"Missing parameter for square root","service":"calculator-microservice"}
+{"level":"error","message":"Missing parameter for square root","service":"calculator-microservice"}
+{"level":"info","message":"Square root operation: sqrt(10) = 3.1622776601683795","service":"calculator-microservice"}
+{"level":"info","message":"Square root operation: sqrt(64) = 8","service":"calculator-microservice"}
+{"level":"info","message":"Exponentiation operation: 10^5 = 100000","service":"calculator-microservice"}
+{"level":"info","message":"Exponentiation operation: 4^2 = 16","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 3 % 15 = 3","service":"calculator-microservice"}
+{"level":"info","message":"Received request: GET /favicon.ico","service":"calculator-microservice"}
+{"level":"info","message":"Modulo operation: 3 % 15 = 3","service":"calculator-microservice"}
+{"level":"info","message":"Received request: GET /favicon.ico","service":"calculator-microservice"}
+{"level":"info","message":"Received request: GET /","service":"calculator-microservice"}
+{"level":"info","message":"Received request: GET /","service":"calculator-microservice"}
+{"level":"info","message":"Received request: GET /","service":"calculator-microservice"}

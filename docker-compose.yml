@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  calculator:
+    build: .
+    ports:
+      - "3000:3000"
+    restart: always
+    depends_on:
+      - mongodb
+    environment:
+      MONGO_DB: calculator_db
+      MONGO_USER: appuser
+      MONGO_PASSWORD: app123
+      MONGO_HOST: mongodb
+      MONGO_PORT: 27017
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3000/add?num1=1&num2=1"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  mongodb:
+    image: mongo:6.0
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: adminpass
+    volumes:
+      - mongo-data:/data/db
+    restart: always
+
+volumes:
+  mongo-data:
